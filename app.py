@@ -19,7 +19,7 @@ def add_bg_from_local(image_files):
     ,
     unsafe_allow_html=True
     )
-add_bg_from_local([r'D:\yash\sms-spam-classifier-main\pic.jpg'])#
+add_bg_from_local([r'pic.jpg'])#
 
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
