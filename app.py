@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pickle
 from pathlib import Path
+import base64
 
 def add_bg_from_local(image_files):
     with open(image_files[0], "rb") as image_file:
