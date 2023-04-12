@@ -5,7 +5,7 @@ from pathlib import Path
 import base64
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "WhatsApp Chat Analyzer"
+PAGE_TITLE = "Laptop Price Predictor"
 PAGE_ICON = ":mag_right:"
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
