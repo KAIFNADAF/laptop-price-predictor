@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pickle
+from pathlib import Path
 
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
