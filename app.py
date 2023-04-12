@@ -3,9 +3,28 @@ import numpy as np
 import pickle
 from pathlib import Path
 
+def add_bg_from_local(image_files):
+    with open(image_files[0], "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    # with open(image_files[1], "rb") as image_file:
+    #     encoded_string1 = base64.b64encode(image_file.read())
+    st.markdown(
+    """
+    <style>
+      .stApp {
+          background-image: url(data:image/png;base64,"""+encoded_string.decode()+""");
+          background-size: cover;
+      }
+    </style>"""
+    ,
+    unsafe_allow_html=True
+    )
+add_bg_from_local([r'D:\yash\sms-spam-classifier-main\pic.jpg'])#
+
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
+
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
