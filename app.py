@@ -6,6 +6,19 @@ import pickle
 pipe = pickle.load(open('pipe.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
 
+# --- PATH SETTINGS ---
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"
+
+# --- GENERAL SETTINGS ---
+PAGE_TITLE = "WhatsApp Chat Analyzer"
+PAGE_ICON = ":mag_right:"
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+
+# --- LOAD CSS---
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 st.title("Laptop Predictor")
 
 # brand
