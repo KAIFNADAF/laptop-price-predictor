@@ -6,8 +6,6 @@ from pathlib import Path
 def add_bg_from_local(image_files):
     with open(image_files[0], "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
-    # with open(image_files[1], "rb") as image_file:
-    #     encoded_string1 = base64.b64encode(image_file.read())
     st.markdown(
     """
     <style>
@@ -19,7 +17,8 @@ def add_bg_from_local(image_files):
     ,
     unsafe_allow_html=True
     )
-add_bg_from_local([r'pic.jpg'])#
+add_bg_from_local(r'pic.jpg')
+
 
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
