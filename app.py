@@ -99,4 +99,7 @@ if st.button('Predict Price'):
         st.title("The predicted price of this configuration is " + str(int(np.exp(pipe.predict(query)[0]))))
     except Exception as e:
         st.write("Please don't enter 0 mention some value!")
-
+        
+if st.button("Reset"):
+    input_sms=""
+    
